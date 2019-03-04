@@ -76,10 +76,6 @@ with open(output_path, 'w', newline='') as csvfile:
     csvwriter.writerow(['Average Change', round(avg(changeinprofitlist),2)])
     csvwriter.writerow(['Greatest Increase in Profits', maxdate, max(changeinprofitlist)])
     csvwriter.writerow(['Greatest Decrease in Profits', mindate, min(changeinprofitlist)])
-    
-    csvwriter.writerow(['Financial Analysis'], ["-" * 20], ['Total Months', len(dateslist)], ['Total Profit(loss)', sum(netprofitlist)]), ['Average Change', round(avg(changeinprofitlist),2)],
-                       ['Greatest Increase in Profits', maxdate, max(changeinprofitlist)],
-                       ['Greatest Decrease in Profits', mindate, min(changeinprofitlist)])
 
 print("-" * 20)
 print(f'CSV file saved here {output_path}')
